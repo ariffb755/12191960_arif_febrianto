@@ -24,6 +24,34 @@
             </div>
 
             <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Gender</label>
+                <div class="col-sm-10">
+                    <select name="gender" id="gender" class="form-control">
+                        <option value="<?= $user['gender']; ?>">Now : <?= $user['gender']; ?></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <?= form_error('gender', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="phone" name="phone" value="<?= $user['phone']; ?>">
+                    <?= form_error('phone', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="address" name="address" value="<?= $user['address']; ?>">
+                    <?= form_error('address', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+            </div>
+
+            <div class="form-group row">
                 <div class="col-sm-2">Picture</div>
                 <div class="col-sm-10">
                     <div class="row">

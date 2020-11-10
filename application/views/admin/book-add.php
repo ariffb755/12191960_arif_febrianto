@@ -5,10 +5,7 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
     <div>
-        <?php
-        if ($this->session->flashdata()) {
-            echo $this->session->flashdata('message');
-        } ?>
+        <?= $this->session->flashdata('message'); ?>
         <form action="<?= base_url('admin/addbookaction'); ?>" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
@@ -29,19 +26,19 @@
             </div>
 
             <div class="form-group">
-                <label>Pengarang</label>
+                <label>Author</label>
                 <input type="text" name="pengarang" id="pengarang" class="form-control">
                 <?= form_error('pengarang', '<p style="color:red;">', '</p>'); ?>
             </div>
 
             <div class="form-group">
-                <label>Tahun Terbit</label>
+                <label>Publication Year</label>
                 <input type="date" name="thn_terbit" id="thn_terbit" class="form-control">
                 <?= form_error('thn_terbit', '<p style="color:red;">', '</p>'); ?>
             </div>
 
             <div class="form-group">
-                <label>Penerbit</label>
+                <label>Publisher</label>
                 <input type="text" name="penerbit" id="penerbit" class="form-control">
                 <?= form_error('penerbit', '<p style="color:red;">', '</p>'); ?>
             </div>
@@ -53,8 +50,8 @@
             </div>
 
             <div class="form-group">
-                <label>Jumlah Buku</label>
-                <input type="text" name="jumlah_buku" id="jumlah_buku" class="form-control">
+                <label>Number of Books</label>
+                <input type="number" name="jumlah_buku" id="jumlah_buku" class="form-control" min="0">
                 <?= form_error('jumlah_buku', '<p style="color:red;">', '</p>'); ?>
             </div>
 
