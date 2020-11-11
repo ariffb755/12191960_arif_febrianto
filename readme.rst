@@ -2,7 +2,7 @@
 Zepfa Library
 ###################
 
-Zepfa Library adalah Aplikasi Sistem Informasi Perpustakaan yang berbasi Web dengan CodeIgniter
+Zepfa Library is a Web-based Library Information System Application with CodeIgniter
 
 *******
 MIT License
