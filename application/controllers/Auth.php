@@ -110,7 +110,7 @@ class Auth extends CI_Controller
 
             $this->_sendEmail($token, 'verify');
 
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please activate your account.</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please check your spam email and activate your account.</div>');
             redirect('auth');
         }
     }
@@ -131,12 +131,13 @@ class Auth extends CI_Controller
         $this->load->library('email', $config);
         $this->email->initialize($config);
 
-        $this->email->from('arif.febrianto.755@gmail.com', 'Ariffb');
+        $this->email->from('arif.febrianto.755@gmail.com', 'Zepfa Team');
         $this->email->to($this->input->post('email'));
 
         if ($type == 'verify') {
             $this->email->subject('Account Verification');
-            $this->email->message('Click this link to verify your account : <a href="' . base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Activate</a>');
+            $this->email->message('Click this link to verify your account : <a href="' . base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Activate</a><br>
+                                   or ' . base_url('auth/verify?email=') . $this->input->post('email') . '&token=' . urlencode($token) . '');
         } else if ($type == 'forgot') {
             $this->email->subject('Reset Password');
             $this->email->message('Click this link to reset your account : <a href="' . base_url() . 'auth/resetpassword?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Reset Password</a>');

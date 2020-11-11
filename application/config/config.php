@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/zepfa-library/';
+$config['base_url'] = 'http://c0e3d62e08c1.ngrok.io/zepfa-library/';
 
 /*
 |--------------------------------------------------------------------------
