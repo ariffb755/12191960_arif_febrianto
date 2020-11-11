@@ -12,6 +12,7 @@
                         <div class="col-lg">
                             <div class="p-5">
                                 <div class="text-center">
+                                    <img src="<?= base_url('assets/img/logo.png'); ?>" alt="logo Zepfa Library" width="80%">
                                     <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
                                 </div>
 

@@ -80,13 +80,31 @@ class Admin extends CI_Controller
     {
         $data['title'] = 'List of Members';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
+        $this->load->model('Books_model', 'books');
+        $data['users']  = $this->books->get_data('user')->result();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('admin/members', $data);
         $this->load->view('templates/footer');
+    }
+
+    public function deleteMember($id)
+    {
+        $data['title']    = 'Delete Member';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->model('Books_model', 'books');
+        $data['buku'] = $this->books->get_data('user')->result();
+        $image = $data['user']['image'];
+        $where = array('id' => $id);
+        unlink('assets/img/profile/' . $image);
+
+        $this->books->delete_data($where, 'user');
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">User deleted successfully!</div>');
+        redirect('admin/members');
     }
 
     public function books()
@@ -136,7 +154,7 @@ class Admin extends CI_Controller
 
         $this->form_validation->set_rules('id_kategori', 'Category', 'required');
         $this->form_validation->set_rules('judul_buku', 'Book Title', 'required');
-        $this->form_validation->set_rules('pengarang', 'Pengarang', 'required');
+        $this->form_validation->set_rules('pengarang', 'Author', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Please go back or <button class="btn btn-danger" onclick="goBack()">Click here</button>!', '</div>');
@@ -181,13 +199,18 @@ class Admin extends CI_Controller
 
     public function bookDetails($id)
     {
+        $data['title'] = 'Book Details';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
         $where = array('id_buku' => $id);
         $data['buku'] = $this->db->query("SELECT * FROM buku B, kategori K WHERE B.id_kategori=K.id_kategori AND B.id_buku='1'")->result();
         $this->load->model('Books_model', 'books');
         $data['kategori'] = $this->books->get_data('kategori')->result();
 
         $this->load->view('templates/header', $data);
-        $this->load->view('admin/book-details', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('books/book-details', $data);
         $this->load->view('templates/footer');
     }
 
@@ -200,7 +223,7 @@ class Admin extends CI_Controller
         $data['buku'] = $this->books->get_data('buku')->result();
         $cover = $data['buku']['gambar'];
         $where = array('id_buku' => $id);
-        unlink(FCPATH . 'assets/img/books/' . $cover);
+        unlink('assets/img/books/' . $cover);
 
         $this->books->delete_data($where, 'buku');
 

@@ -29,7 +29,7 @@
                 ?>
                     <tr>
                         <td scope="row"><?= $no++; ?></td>
-                        <td><img src="<?= base_url('assets/img/books/') . $b->gambar; ?>" width="80" alt="Cover Buku"></td>
+                        <td><img src="<?= base_url('assets/img/books/') . $b->gambar; ?>" width="80" alt="Book Cover"></td>
                         <td><?= $b->judul_buku; ?></td>
                         <td><?= $b->lokasi; ?></td>
                         <td>
@@ -42,7 +42,7 @@
                             ?>
                         </td>
                         <td nowrap="nowrap">
-                            <a class="btn btn-success btn-xs" href="<?= base_url('admin/bookdetails/') . $b->id_buku; ?>" data-toggle="modal" data-target="#newMenuModal"><span class="fas fa-search-plus"></span></a>
+                            <a class="btn btn-success btn-xs" href="<?= base_url('lbooks/bookdetails/') . $b->id_buku; ?>"><span class="fas fa-search-plus"></span></a>
                             <a class="btn btn-primary btn-xs" href="<?= base_url('admin/editBook/') . $b->id_buku; ?>"><span class="fas fa-pencil-alt"></span></a>
                             <a class="btn btn-danger btn-xs" href="<?= base_url('admin/deleteBook/') . $b->id_buku; ?>"><span class="fas fa-trash-alt"></span></a>
                         </td>

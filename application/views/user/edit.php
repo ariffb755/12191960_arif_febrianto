@@ -38,7 +38,8 @@
             <div class="form-group row">
                 <label for="name" class="col-sm-2 col-form-label">Phone</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="phone" name="phone" value="<?= $user['phone']; ?>">
+                    <p>Please use 628*, don't use 08*</p>
+                    <input type="number" class="form-control" id="phone" name="phone" value="<?= $user['phone']; ?>" placeholder="Please use 628*, don't use 08*">
                     <?= form_error('phone', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
             </div>

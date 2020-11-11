@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <h1 class="card-title"><?= $this->db->get('buku')->num_rows(); ?></h1>
                     <p class="card-text">Number of books registered</p>
-                    <a href="#" class="btn btn-primary">View Details <span class="fa fa-arrow-right"></span></a>
+                    <a href="<?= base_url('admin/books') ?>" class="btn btn-primary">View Details <span class="fa fa-arrow-right"></span></a>
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
                 <div class="card-body">
                     <h1 class="card-title"><?= $this->db->get('user')->num_rows(); ?></h1>
                     <p class="card-text">Number of registered members</p>
-                    <a href="#" class="btn btn-primary">View Details <span class="fa fa-arrow-right"></span></a>
+                    <a href="<?= base_url('admin/members') ?>" class="btn btn-primary">View Details <span class="fa fa-arrow-right"></span></a>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
                 <div class="card-body">
                     <h1 class="card-title"><?= $this->db->get_where('transaksi', array('status_peminjaman' => 0))->num_rows(); ?></h1>
                     <p class="card-text">The loan is not finished</p>
-                    <a href="#" class="btn btn-primary">View Details <span class="fa fa-arrow-right"></span></a>
+                    <a href="<?= base_url('admin/transactions') ?>" class="btn btn-primary">View Details <span class="fa fa-arrow-right"></span></a>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                 <div class="card-body">
                     <h1 class="card-title"><?= $this->db->get_where('transaksi', array('status_peminjaman' => 1))->num_rows(); ?></h1>
                     <p class="card-text">Borrowing is complete ok</p>
-                    <a href="#" class="btn btn-primary">View Details <span class="fa fa-arrow-right"></span></a>
+                    <a href="<?= base_url('admin/transactions') ?>" class="btn btn-primary">View Details <span class="fa fa-arrow-right"></span></a>
                 </div>
             </div>
         </div>
