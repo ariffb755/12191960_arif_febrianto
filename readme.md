@@ -18,7 +18,7 @@ Download or use command git
 ##### Installing via git
 
 ```bash
-npm install apexcharts --save
+git clone https://github.com/ariffb755/12191960_arif_febrianto.git
 ```
 
 ## Contacts
