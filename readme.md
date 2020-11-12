@@ -8,9 +8,7 @@
   <a href="https://twitter.com/ariffb_"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"> </a>
 </p>
 
-###################
-Zepfa Library
-###################
+## Zepfa Library
 
 Zepfa Library is a Web-based Library Information System Application with CodeIgniter
 
@@ -23,7 +21,6 @@ Download or use command git
 npm install apexcharts --save
 ```
 
-
 ## Contacts
 
 Email: <a href="mailto:ariffb755@gmail.com">ariffb755@gmail.com</a>
@@ -34,4 +31,4 @@ Facebook: <a href="https://www.facebook.com/ariffb755/">fb.com/ariffb755</a>
 
 ## License
 
-ApexCharts is released under MIT license. You are free to use, modify and distribute this software, as long as the copyright header is left intact.
+Zepfa Library is released under MIT license. You are free to use, modify and distribute this software, as long as the copyright header is left intact.
