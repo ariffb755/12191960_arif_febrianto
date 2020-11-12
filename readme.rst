@@ -1,28 +1,37 @@
+<p align="center"><img src="https://i.ibb.co/HVYkfvQ/zepfa-library.png" alt="zepfa-library" border="0"></p>
+
+<p align="center">
+  <a href="https://github.com/apexcharts/apexcharts.js/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://twitter.com/ariffb_"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"> </a>
+</p>
+
 ###################
 Zepfa Library
 ###################
 
 Zepfa Library is a Web-based Library Information System Application with CodeIgniter
 
-*******
-MIT License
-*******
+## How to use?
+Download or use command git
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+##### Installing via git
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+```bash
+npm install apexcharts --save
+```
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Contacts
+
+Email: <a href="mailto:ariffb755@gmail.com">ariffb755@gmail.com</a>
+
+Twitter: <a href="https://twitter.com/aariffb_">@ariffb_</a>
+
+Facebook: <a href="https://www.facebook.com/ariffb755/">fb.com/ariffb755</a>
+
+## License
+
+ApexCharts is released under MIT license. You are free to use, modify and distribute this software, as long as the copyright header is left intact.
