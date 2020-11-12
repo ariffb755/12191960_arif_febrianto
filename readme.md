@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.ibb.co/HVYkfvQ/zepfa-library.png" alt="zepfa-library" border="0" witdh="200"></p>
+<p align="center"><img src="https://i.ibb.co/HVYkfvQ/zepfa-library.png" alt="zepfa-library" border="0" style="max-width:70%;"></p>
 
 <p align="center">
   <a href="https://github.com/ariffb755/12191960_arif_febrianto/blob/master/license.txt"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License"></a>
