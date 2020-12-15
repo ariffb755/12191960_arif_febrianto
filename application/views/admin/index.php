@@ -5,7 +5,7 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 mb-4">
             <div class="card border-primary">
                 <div class="card-body">
                     <h1 class="card-title"><?= $this->db->get('buku')->num_rows(); ?></h1>
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 ">
             <div class="card border-primary">
                 <div class="card-body">
                     <h1 class="card-title"><?= $this->db->get('user')->num_rows(); ?></h1>
@@ -49,7 +49,7 @@
     <!-- list -->
     <div class="row">
 
-        <div class="card border-primary mb-3 mt-4 ml-3" style="max-width: 24rem;">
+        <div class="card border-primary mb-3 mt-4 ml-3" style="max-width: 20rem;">
             <div class="card-header">Books</div>
             <div class="card-body text-primary">
                 <?php foreach ($buku as $b) { ?>
@@ -65,19 +65,23 @@
             </div>
         </div>
 
-        <div class="card border-primary mb-3 mt-4 ml-4" style="max-width: 18rem;">
+        <div class="card border-primary mb-3 mt-4 ml-2" style="max-width: 18rem;">
             <div class="card-header">User Registered</div>
             <div class="card-body text-primary">
                 <?php foreach ($anggota as $a) { ?>
                     <a href="#" class="list-group-item">
-                        <span class="badge"><?= $a->gender; ?></span>
+                        <?php if ($a->gender == "Male") {
+                            echo "<span class='badge badge-primary'>Male";
+                        } else {
+                            echo "<span class='badge badge-danger'>Female";
+                        } ?></span>
                         <i class="glyphicon glyphicon-user"></i><?= $a->name; ?>
                     </a>
                 <?php } ?>
             </div>
         </div>
 
-        <div class="card border-primary mb-3 mt-4 ml-4" style="max-width: 26rem;">
+        <div class="card border-primary mb-3 mt-4 ml-2" style="max-width: 26rem;">
             <div class="card-header">Final Borrowings</div>
             <div class="card-body text-primary">
                 <div class="table-responsive">
